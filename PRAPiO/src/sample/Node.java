@@ -2,7 +2,7 @@ package sample;
 public class Node {
     Path[] paths;
     int [][] nodeMatrix;
-    int[][] cycle; // numer cyklu, wejscie, wyjscie
+    int[][] cycle; // number of cycle, [entance] [exit]
     int cost = 0, idOfLeftChild, idOfRightChild,
             parentId, matrixSize, id, numberOfPaths,
     x = 0, y = 0;
@@ -25,10 +25,7 @@ public class Node {
         }
 
         numberOfPaths = 0;
-    } // Konstruktor
-    /**
-     * Funkcja redukująca koszt węzła, wyznaczająca mu potencjalny najniższy koszt przebycia trasy z jego przejściami
-     */
+    }
     public void optimize() {
         int reductionCost = 0;
         // Checking rows
